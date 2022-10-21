@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 int int main(){
-  cout<<"Hello world!";
+  setlocale (LC_ALL, "rus");
+  cout<<"УРА УРА УРА";
   return 0;
 }
