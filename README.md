@@ -1,1 +1,2 @@
-my_own_rep
+# MY OWN REPOSITORY
+In this plase i will locate some intresting things
