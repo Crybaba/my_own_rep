@@ -1,2 +1,2 @@
-# MY OWN REPOSITORY
-In this plase i will locate some intresting things
+# BASED REPOSITORY
+This place stores all the basic information such as laboratory work, practice, and so on.
