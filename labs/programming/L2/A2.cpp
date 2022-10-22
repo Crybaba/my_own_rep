@@ -14,9 +14,9 @@ void rate(long double x, long double a) {
 	long double eps, y = 0, k = 1, pi = 3.1415926535;
 	int n = 0;
 	while (true) {
-		cout << "Ââåäèòå eps(0<eps<1): "; cin >> eps; cout << '\n';
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ eps(0<eps<1): "; cin >> eps; cout << '\n';
 		if (eps < 1 and eps>0) break;
-		else cout << "Ââåäåíî íåïðàâèëüíîå çíà÷åíèå, ââåäèòå ñíîâà.\n";
+		else cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°.\n";
 	}
 	while (fabs(k) > eps) {
 		k = pow(x, n) * cos(a + n * pi / 2) / fact(n);
@@ -33,7 +33,7 @@ void given(long double x, long double a) {
 	while (true) {
 		brkg = 1;
 		sn = "";
-		cout << "Ââåäèòå n>=0: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ n>=0: ";
 		m = getchar();
 		sn += m;
 		if ((m < '0' or m>'9') and m != '\n') brkg = 0;
@@ -47,7 +47,7 @@ void given(long double x, long double a) {
 			n = stoi(sn);
 			if (n >= 0) break;
 		}
-		else cout << "Ââåäåíî íåïðàâèëüíîå çíà÷åíèå, ââåäèòå ñíîâà.\n";
+		else cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°.\n";
 	}
 
 	for (int k = 0; k <= n; k++) {
@@ -65,17 +65,17 @@ int main() {
 	setlocale(LC_ALL, "rus");
 	int choise, brkm;
 	while (true) {
-		cout << "\nêàê ïðîèçâîäèòü ðàñ÷åò(1 - äî ïîãðåøíîñòè, 2 - äî çàäàííîãî ÷ëåíà ðÿäà, 3 - ïî ôóíêöèè): "<<setprecision(10);
+		cout << "\nÐºÐ°Ðº Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÑŒ Ñ€Ð°ÑÑ‡ÐµÑ‚(1 - Ð´Ð¾ Ð¿Ð¾Ð³Ñ€ÐµÑˆÐ½Ð¾ÑÑ‚Ð¸, 2 - Ð´Ð¾ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ñ‡Ð»ÐµÐ½Ð° Ñ€ÑÐ´Ð°, 3 - Ð¿Ð¾ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸): "<<setprecision(10);
 		cin >> choise;
 		if (choise > 0 and choise < 4) break;
-		cout << "\nÍåïðàâèëüíîå çíà÷åíèå.";
+		cout << "\nÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ.";
 	}
 	long double x, a;
 	string sx, sa;
 
 	while (true) {
 		brkm = 1;
-		cout << "Ââåäèòå x(-1<x<1), a: "; cin >> sx >> sa; cout << '\n';
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ x(-1<x<1), a: "; cin >> sx >> sa; cout << '\n';
 		for (char m : sx)
 			for (char n : sa) {
 				if (((m < '0' or m>'9') and m != ',') or ((n < '0' or n>'9') and n != ',')) brkm = 0;
@@ -84,7 +84,7 @@ int main() {
 			a = stof(sa); x = stof(sx);
 		}
 		if (brkm == 1 and fabs(x) < 1) break;
-		else cout << "Êàêîå-òî èç çíà÷åíèé ââåäåíî íåâåðíî, ââåäèòå ñíîâà.\n";
+		else cout << "ÐšÐ°ÐºÐ¾Ðµ-Ñ‚Ð¾ Ð¸Ð· Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹ Ð²Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐ²ÐµÑ€Ð½Ð¾, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°.\n";
 	}
 
 	switch (choise) {
